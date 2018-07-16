@@ -5,6 +5,5 @@
 		"name": "heroku_pfsf2mws",
 		"host": "heroku_pfsf2mws:123denis@ds139341.mlab.com",
 		"port": "39341"
-		//"port": 27017
 	}
 }
