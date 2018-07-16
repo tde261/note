@@ -32,8 +32,10 @@ app.delete('/notes/:id', (req, res) => {
 });
 
 //HEROKU
-const server = app.listen(os.Getenv("PORT"), function() {
-    console.log(`Server is up and running on port ${os.Getenv("PORT")}`);
+var port = process.env.PORT || 3000; 
+
+const server = app.listen(port, function() {
+    console.log(`Server is up and running on port ${port}`);
 });
 
 
