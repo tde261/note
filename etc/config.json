@@ -2,8 +2,9 @@
 	"apiPrefix": "http://localhost:8080",
 	"serverPort": "8080",
 	"db":{
-		"name": "notes",
-		"host": "localhost",
-		"port": 27017
+		"name": "heroku_pfsf2mws",
+		"host": "heroku_pfsf2mws:123denis@ds139341.mlab.com",
+		"port": "39341"
+		//"port": 27017
 	}
 }
