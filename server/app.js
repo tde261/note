@@ -18,6 +18,10 @@ app.use( bodyParser.json() );
 // Allow requests from any origin
 app.use(cors({ origin: '*' }));
 
+app.get('/', function(request, response) {
+   response.render('pages/index')
+});
+
 // RESTful api handlers
 app.get('/notes', (req, res) => {
     db.listNotes().then(data => res.send(data));
