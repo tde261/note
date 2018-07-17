@@ -18,6 +18,12 @@ app.use( bodyParser.json() );
 // Allow requests from any origin
 app.use(cors({ origin: '*' }));
 
+app.get('/', function(req, res) {
+
+	// ejs render automatically looks in the views folder
+	res.render('index');
+});
+
 // RESTful api handlers
 app.get('/notes', (req, res) => {
     db.listNotes().then(data => res.send(data));
