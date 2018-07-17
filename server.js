@@ -2,9 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-import { serverPort } from './etc/config.json';
+import { serverPort } from 'etc/config.json';
 
-import * as db from './utils/DataBaseUtils';
+import * as db from 'utils/DataBaseUtils';
 
 // Initialization of express application
 const app = express();
