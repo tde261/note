@@ -9,6 +9,8 @@ import * as db from './utils/DataBaseUtils';
 // Initialization of express application
 const app = express();
 
+app.set('view engine', 'jade');
+
 var port = process.env.PORT || 8080; 
 
 // make express look in the public directory for assets (css/js/img)
