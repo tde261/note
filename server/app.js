@@ -9,6 +9,10 @@ import * as db from './utils/DataBaseUtils';
 // Initialization of express application
 const app = express();
 
+var port = process.env.PORT || 8080; 
+
+app.use(express.staticProvider(__dirname + '/public'));
+
 // Set up connection of database
 db.setUpConnection();
 
@@ -19,9 +23,8 @@ app.use( bodyParser.json() );
 app.use(cors({ origin: '*' }));
 
 app.get('/', function(req, res) {
-
 	// ejs render automatically looks in the views folder
-	res.render('../public/index.html');
+	res.render('index');
 });
 
 // RESTful api handlers
@@ -38,12 +41,9 @@ app.delete('/notes/:id', (req, res) => {
 });
 
 //HEROKU
-var port = process.env.PORT || 3000; 
-
 const server = app.listen(port, function() {
     console.log(`Server is up and running on port ${port}`);
 });
-
 
 //LOCALHOST
 /*
