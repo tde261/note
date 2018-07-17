@@ -11,7 +11,8 @@ const app = express();
 
 var port = process.env.PORT || 8080; 
 
-app.use(express.staticProvider(__dirname + '/public'));
+// make express look in the public directory for assets (css/js/img)
+app.use(express.static(__dirname + '/public'));
 
 // Set up connection of database
 db.setUpConnection();
