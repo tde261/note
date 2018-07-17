@@ -21,7 +21,7 @@ app.use(cors({ origin: '*' }));
 app.get('/', function(req, res) {
 
 	// ejs render automatically looks in the views folder
-	res.render('index');
+	res.render('../public/index.html');
 });
 
 // RESTful api handlers
