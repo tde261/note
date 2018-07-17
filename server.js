@@ -2,14 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-import { serverPort } from '../etc/config.json';
+import { serverPort } from './etc/config.json';
 
 import * as db from './utils/DataBaseUtils';
 
 // Initialization of express application
 const app = express();
-
-app.set('view engine', 'jade');
 
 var port = process.env.PORT || 8080; 
 
@@ -24,11 +22,6 @@ app.use( bodyParser.json() );
 
 // Allow requests from any origin
 app.use(cors({ origin: '*' }));
-
-app.get('/', function(req, res) {
-	// ejs render automatically looks in the views folder
-	res.render('index');
-});
 
 // RESTful api handlers
 app.get('/notes', (req, res) => {
