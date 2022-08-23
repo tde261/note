@@ -1,7 +1,7 @@
 {
   "name": "NotesApp",
   "version": "0.0.1",
-  "description": "Notes application",
+  "description": "Notes application HDTYJKTY",
   "scripts": {
     "start": "babel-node server.js",
     "eee": "webpack -p",
